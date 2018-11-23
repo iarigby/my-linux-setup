@@ -3,7 +3,7 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
-alias eals="sudo emacs ~/.bashrc"
+alias ebashrc="sudo emacs ~/.bashrc"
 alias lmgr="cd ~/dev/scala/learning-management/play-scala-seed/"
 alias clm="clm -l -no-pie"
 alias cleanfe="cd ~/dev/clean-ide/frontend"
@@ -13,3 +13,7 @@ alias flux="xflux -l 47.4979 -g 19.0402 -k 3000"
 alias cleangitlab="ssh gitlab_acc@178.62.77.9"
 xhost +local:root > /dev/null 2>&1
 alias clang++="/usr/bin/clang++"
+alias eals="~/my-linux-setup/eals"
+alias reload=". ~/.bashrc"
+alias fuck='sudo "$BASH" -c "$(history -p !!)"'
+alias please='fuck'

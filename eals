@@ -12,5 +12,9 @@ def append_alias(content):
 
 #TODO add removing, editing
 if (__name__ == '__main__'):
-    append_alias(get_alias_format(sys.argv[1], sys.argv[2]))
-    Popen(['source ~/.bashrc'], shell=True).communicate()
+    if len(sys.argv) == 3:
+        append_alias(get_alias_format(sys.argv[1], sys.argv[2]))
+        Popen(['source ~/.bashrc'], shell=True).communicate()
+    else:
+        print('wrong number of arguments')
+        exit()
