@@ -1,0 +1,16 @@
+#! /usr/bin/env python
+import sys
+from subprocess import Popen, PIPE
+
+#alias_file = read
+def get_alias_format(command, script):
+    return f'alias {command}="{script}"' 
+
+def append_alias(content):
+    with open(".aliases", "a") as myfile:
+        myfile.write('\n' + content)
+
+#TODO add removing, editing
+if (__name__ == '__main__'):
+    append_alias(get_alias_format(sys.argv[1], sys.argv[2]))
+    Popen(['source ~/.bashrc'], shell=True).communicate()
