@@ -20,3 +20,5 @@ alias please='fuck'
 
 # TODO get input (will need functions)
 # alias eals last=eals "$BASH" -c "$(history -p !!)"
+alias gh="xdg-open `git remote -v | grep fetch | awk '{print $2}' | sed 's/git@/http:\/\//' | sed 's/com:/com\//'`| head -n1"
+# source https://gist.github.com/igrigorik/6666860
