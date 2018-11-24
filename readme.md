@@ -23,5 +23,9 @@ include this directory in path
 ### importing alias file
 [stackexchange](https://superuser.com/questions/331763/bashrc-loading-aliases-from-different-file)
 
+## Folder management
+- alias to add current directory
+
 # TODO
-- add branch name to all commits [like this](https://stackoverflow.com/questions/5894946/how-to-add-gits-branch-name-to-the-commit-message)
+- [ ] add branch name to all commits [like this](https://stackoverflow.com/questions/5894946/how-to-add-gits-branch-name-to-the-commit-message)
+- [ ] do export environment variables and path similar to aliases 
