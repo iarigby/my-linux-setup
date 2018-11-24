@@ -22,3 +22,6 @@ include this directory in path
 ## don't know how to name this section yet
 ### importing alias file
 [stackexchange](https://superuser.com/questions/331763/bashrc-loading-aliases-from-different-file)
+
+# TODO
+- add branch name to all commits [like this](https://stackoverflow.com/questions/5894946/how-to-add-gits-branch-name-to-the-commit-message)
