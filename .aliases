@@ -17,3 +17,6 @@ alias eals="~/my-linux-setup/eals"
 alias reload=". ~/.bashrc"
 alias fuck='sudo "$BASH" -c "$(history -p !!)"'
 alias please='fuck'
+
+# TODO get input (will need functions)
+# alias eals last=eals "$BASH" -c "$(history -p !!)"
