@@ -34,3 +34,5 @@ include this directory in path
 [some info](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
 - [ ] add branch name to all commits [like this](https://stackoverflow.com/questions/5894946/how-to-add-gits-branch-name-to-the-commit-message)
 - [ ] configure commits to get message from file (and add hook to empty it, add alias to echo > to it) in commit message, if there are multiple lines, display and ask for summary (or line number to display), convert all others to `-` [here's how](https://stackoverflow.com/questions/20438293/preparing-a-git-commit-messaging-before-committing)
+- [ ] search diffs for removed TODOs, add them as done in commit message
+- [ ] command to search all repositories for uncommited changes and force to commit, push all changes
