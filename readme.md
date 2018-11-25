@@ -36,3 +36,4 @@ include this directory in path
 - [ ] configure commits to get message from file (and add hook to empty it, add alias to echo > to it) in commit message, if there are multiple lines, display and ask for summary (or line number to display), convert all others to `-` [here's how](https://stackoverflow.com/questions/20438293/preparing-a-git-commit-messaging-before-committing)
 - [ ] search diffs for removed TODOs, add them as done in commit message
 - [ ] command to search all repositories for uncommited changes and force to commit, push all changes
+- [ ] alias to open file on github (maybe copy link as well)
