@@ -1,0 +1,5 @@
+echo "enter password":
+read -s password
+cd /mydev/clean-ide/clean-ide
+echo $password | sudo ng build --prod
+sshpass scp -p $password -o stricthostkeychecking=no -r ~/dev/clean-ide/clean-ide/dist/clean-ide/* gitlab_acc@178.62.77.9:/var/www/html

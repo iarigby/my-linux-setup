@@ -1,0 +1,1 @@
+- https://wiki.manjaro.org/index.php?title=Add_a_/swapfile
