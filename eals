@@ -7,7 +7,7 @@ def get_alias_format(command, script):
     return f'alias {command}="{script}"' 
 
 def append_alias(content):
-    with open(".aliases", "a") as myfile:
+    with open("/home/marvin/my-linux-setup/.aliases", "a") as myfile:
         myfile.write('\n' + content)
 
 #TODO add removing, editing
