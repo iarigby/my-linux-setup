@@ -16,7 +16,7 @@ yaourt -S --noconfirm dropbox
 dropbox &
 read -p "waiting for dropbox to be set up..." confirm
 
-#ssh_business
+# ssh_business
 mkdir ~/.ssh
 cp ~/Dropbox/ssh/id_rsa* ~/.ssh/
 chmod 700 ~/.ssh/id_rsa
@@ -41,24 +41,43 @@ git config --global user.email "marvinzem@gmail.com"
 git config --global user.name "iarigby"
 
 mkdir ~/dev
-cd dev
-# some bullshit because first one won't clone :)
-dev_repos=(some_bullshit, learning, liblibfuzz, distributed-systems)
+cd ~/dev
+dev_repos=(learning liblibfuzz distributed-systems)
 cloneall ${dev_repos[@]}
+cd ~
 
-read -p "installing pacman programs" confirm
-pacman_programs=(xclip, thefuck, chromium)
+read -p "installing pacman and yaourt programs..." confirm
+pacman_programs=(emacs, xclip, thefuck, chromium, xdotool)
 sudo pacman -S --noconfirm ${pacman_programs[@]}
 
-yaourt_programs=(sublime-text-dev)
+yaourt_programs=(sublime-text-dev spotify)
 yaourt -S --noconfirm ${yaourt_programs[@]}
+spotify &
 
-#visual setup
+# emacs setup
+mkdir ~/.emacs.d
+cp ~/Dropbox/.emacs ~/
+cp -r ~/Dropbox/emacs.d/* ~/.emacs.d
+emacs &
 
-# TODO ew
-read -p "konsole: download breeze blur, change white on black transparency" confirm
+# visual setup
+# https://techbase.kde.org/Development/Tutorials/D-Bus/Introduction 
+
+read -p "konsole: download breeze blur, faint dark" confirm
+# did manually
+# keyboard > layouts add geo + shortcut
+# task switcher > cover switch
+# add virtual desktops
+# TODO maybe just sync the config file
+# sed -i "s/\(nightTemperature *= *\).*/\12250/" ~/.config/kglobalshortcutsrc 
 
 
-#xdotool script
-#path
-#chmod scripts
+# TODO 
+# add blur
+# xdotool script
+# path
+# chmod scripts
+# keyboard shortcuts for : windows, workspaces, moving workspaces, show desktop
+
+# other todos
+# move org repo to dropbox
