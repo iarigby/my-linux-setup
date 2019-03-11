@@ -12,8 +12,8 @@ alias deploycleanbe="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyCheckin
 alias flux="xflux -l 47.4979 -g 19.0402 -k 3000"
 alias cleangitlab="ssh gitlab_acc@178.62.77.9"
 xhost +local:root > /dev/null 2>&1
-alias clang++="/usr/bin/clang++"
-alias clang="/usr/bin/clang"
+#alias clang++="/home/ia/build/bin/clang++"
+#alias clang="/home/ia/build/bin/clang"
 alias eals="~/my-linux-setup/eals"
 alias reload=". ~/.bashrc"
 alias please='fuck'
@@ -33,6 +33,6 @@ function gh() {
 function cpdate() {
 	date '+%Y-%m-%d %H:%M:%S' | xclip -sel clip
 }
-alias thesis="cd ~/school-old/liblibfuzz/"
+alias thesis="cd ~/dev/liblibfuzz/"
 alias datef="date '+%Y-%m-%d %H:%M:%S'"
 alias datef="date '+%Y-%m-%d-%H-%M'"

@@ -47,7 +47,7 @@ cloneall ${dev_repos[@]}
 cd ~
 
 read -p "installing pacman and yaourt programs..." confirm
-pacman_programs=(emacs, xclip, thefuck, chromium, xdotool)
+pacman_programs=(emacs, xclip, thefuck, chromium, xdotool, clang, gdb)
 sudo pacman -S --noconfirm ${pacman_programs[@]}
 
 yaourt_programs=(sublime-text-dev spotify)
