@@ -1,0 +1,34 @@
+#!/bin/sh
+
+repo_name=$1
+destination_name=$2
+function get_url() {
+  echo "git@github.com:iarigby/$1.git"
+}
+if [ -z "$1" ] 
+then
+  echo "provide repo"
+  exit 
+elif [ -z "$2" ]
+then
+  echo "provide destination repo"
+  exit
+fi
+cd ~/dev
+git clone $(get_url $repo_name)
+cd $repo_name
+git remote remove origin
+mkdir $repo_name
+mv * $repo_name
+mv .gitignore .gitattributes $repo_name
+git add .
+git commit -m "moving everything to subdir for merge"
+git remote add origin $(get_url $2)
+git fetch
+git merge --allow-unrelated-histories origin/master
+git push --set-upstream origin master
+token=$(head -n 1 ~/my-linux-setup/scripts/github-token)
+curl -X "DELETE" -H "Authorization: token $token" https://api.github.com/repos/iarigby/$repo_name
+cd ..
+sudo rm -r $repo_name
+# delete repo from github
