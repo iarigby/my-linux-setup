@@ -1,0 +1,9 @@
+[Unit]
+Description = making network connection up
+After = network.target
+
+[Service]
+ExecStart =  /home/ia/my-linux-setup/scripts/connection.sh
+
+[Install]
+WantedBy = default.target
