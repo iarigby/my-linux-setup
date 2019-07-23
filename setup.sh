@@ -50,8 +50,8 @@ read -p "installing pacman and yaourt programs..." confirm
 pacman_programs=(emacs, xclip, thefuck, chromium, xdotool, clang, gdb)
 sudo pacman -S --noconfirm ${pacman_programs[@]}
 
-yaourt_programs=(sublime-text-dev spotify)
-yaourt -S --noconfirm ${yaourt_programs[@]}
+yay_programs=(sublime-text-dev spotify unclutter)
+yay -S --noconfirm ${yay_programs[@]}
 spotify &
 
 # emacs setup
@@ -64,6 +64,12 @@ emacs &
 # https://techbase.kde.org/Development/Tutorials/D-Bus/Introduction 
 
 read -p "konsole: download breeze blur, faint dark" confirm
+
+echo "enabling emacs as daemon"
+systemctl --user enable --now emacs
+# https://wiki.archlinux.org/index.php/emacs#As_a_systemd_unit
+
+
 # did manually
 # keyboard > layouts add geo + shortcut
 # task switcher > cover switch
