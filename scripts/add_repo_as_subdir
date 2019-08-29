@@ -28,6 +28,9 @@ git fetch
 git merge --allow-unrelated-histories origin/master
 git push --set-upstream origin master
 token=$(head -n 1 ~/my-linux-setup/scripts/github-token)
+# TODO do basic fucking error handling
+# check commit on github
+# git log -n 1
 curl -X "DELETE" -H "Authorization: token $token" https://api.github.com/repos/iarigby/$repo_name
 cd ..
 sudo rm -r $repo_name

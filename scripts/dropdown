@@ -1,0 +1,2 @@
+#!/bin/sh
+tdrop -a -w 50% --height "50%" kitty    
