@@ -1,2 +1,2 @@
 #!/bin/sh
-tdrop -a -w 50% --height "50%" kitty    
+tdrop -w 60% -h 40% -x 20% --name=dropdown --no-cancel kitty 
